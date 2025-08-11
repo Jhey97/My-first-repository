@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar objetos em JSON</title>
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        border-radius: 10px 5px 5px 10px;
+        border: 3px solid rgb(10, 10, 10);
+        background-color: #0c0c0c;
+        box-shadow: 0 4px 8px rgba(242, 245, 242, 0.2);
+        text-shadow: #f0fff0;
+     }
+    pre {
+        background-color: #181717;
+        padding: 12px;
+        border-radius: 7px;
+        font-size: 14px;  
+     }
+     </style>
+</head>
+<body>
+    <h1 style="color:aqua">Atividade Front-End:</h1>
+    <main>
+    <h2 style="color: aqua;">Visualizar dados com arquivos JSON</h2>
+        <h4 style="color: aqua;">Estou trazendo um arquivo básico, como demostração de leitura de arquivo JSON:</h4>
+    </main>
+    <section>
+        <script id="Json-display" type="application/json" 
+        style="color: aqua;">
+            {"Nome": "Jose Henrique Cordeiro",
+             "Idade": 27,
+            "Cidade": "Embu das Artes"
+        }
+        </script>
+        <p id="json-output" style="color: aqua;"></p>
+    <script>
+        const JsonText= document.getElementById("Json-display").textContent;
+        const dados = JSON.parse(JsonText);
+        const output = `  Nome: ${dados.Nome}<br>
+      Idade: ${dados.Idade}<br>
+      Cidade: ${dados.Cidade}
+    `;
+     document.getElementById("json-output").innerHTML = output;
+    </script>
+    </section>
+    <img src="C:\Users\henri\Desktop\atividade ads 1\logo_descomplica-pos-graduacao_r2UHUU.png"
+         alt="Logo"
+        style="position: absolute; bottom: 0; right: 0; width: 100px;">
+    <footer>
+            <p style="color: aliceblue;">&copy; 2025, José Henrique Cordeiro Vieria</p>
+    </footer>
+</body>
+</html>

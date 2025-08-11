@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar objetos em JSON</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+      border-radius: 10px 5px 5px 10px;
+      border: 3px solid rgb(10, 10, 10);
+      background-color: #0c0c0c;
+      box-shadow: 0 4px 8px rgba(242, 245, 242, 0.2);
+      color: aqua;
+    }
+    pre {
+      background-color: #181717;
+      padding: 12px;
+      border-radius: 7px;
+      font-size: 14px;
+      color: #00ffff;
+    }
+    footer {
+      margin-top: 40px;
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Atividade Front-End:</h1>
+  <main>
+    <h2>Visualizar dados com arquivos JSON</h2>
+    <h4>Exibindo o conteúdo de um objeto JSON formatado:</h4>
+  </main>
+
+  <section>
+    <pre id="json-output"></pre>
+
+    <script>
+      // Objeto JSON declarado diretamente
+      const meuObjetoJSON = {
+        "Nome": "Jose Henrique Cordeiro",
+        "Idade": 27,
+        "Cidade": "Embu das Artes"
+      };
+
+      // Exibindo o JSON formatado com indentação
+      const jsonFormatado = JSON.stringify(meuObjetoJSON, null, 2);
+      document.getElementById("json-output").textContent = jsonFormatado;
+    </script>
+  </section>
+
+  <!-- Caminho relativo para imagem -->
+  <img src="logo_descomplica-pos-graduacao_r2UHUU.png"
+       alt="Logo"
+       style="position: absolute; bottom: 0; right: 0; width: 100px;">
+
+  <footer>
+    <p>&copy; 2025, José Henrique Cordeiro Vieira</p>
+  </footer>
+</body>
+</html>
